@@ -145,11 +145,11 @@ setInterval(printTime, 1000);
 
 ### DOM & Events
 ```Javascript
-// Selecting elements
+// selecting elements:
 document.getElementById(id) // by id(single element)
 document.getElementsByClassName(name) // by class name(multiple elements grouped by array)
 document.getElementsByTagName(name) // by tag name(tag example: <p> and grouped as array)
-// example 1:
+// changing elements:
 <p>I</p>
 <p>am</p>
 <p>programmer</p>
@@ -159,13 +159,13 @@ for(var x = 0; x<itemsToChange.length; x++) {
   itemsToChange[x].innerHTML = "Hello world"; // changes those <p> elements to "Hello world"
 }
 </script>
-// example 2:
+// changing attributes:
 <img id="myImage" src="python.png" alt="" />
 <script>
 var imageChange = document.getElementById("myImage");
 imageChange.src = "java.png" // We can use innerHTML, src, href, style attributes to change contents of HTML or CSS
 </script>
-// example 3:
+// changing attributes in CSS:
 <div id="CSSChange" style="width: 200px">Some Text</div>
 <script>
 var a = document.getElementById("CSSChange");
@@ -173,6 +173,12 @@ a.style.color = "6600FF";
 a.style.width = "100px";
 a.style.backgroundColor = "#33EA73"; // notice CSS property background-color is changed to backgroundColor in js
 </script>
+// to create elements:
 
+// to remove elements:
+<script>parent.removeChild(child); // or
+child.parentNode.removeChild(child); </script>
+// to replace elements:
 
+//
 ```
