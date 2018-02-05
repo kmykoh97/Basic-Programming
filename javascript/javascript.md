@@ -9,6 +9,19 @@ document.write(firstVariable + secondVariable);
 alert("Hello, this is a very easy sample code");
 ```
 
+### operators
+```Javascript
+// logical operators
+!a // not
+a && b // AND
+a || b // OR
+
+// ternary operators
+/*((condition) ? value1 : value2)*/
+/*example*/ var gender = 0
+var maleOrFemale = (gender != 0) ? "female" : "male" // maleOrFemale="male"
+```
+
 ### if-else
 ```Javascript
 // if-else statement
