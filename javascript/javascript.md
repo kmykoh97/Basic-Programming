@@ -149,6 +149,7 @@ setInterval(printTime, 1000);
 document.getElementById(id) // by id(single element)
 document.getElementsByClassName(name) // by class name(multiple elements grouped by array)
 document.getElementsByTagName(name) // by tag name(tag example: <p> and grouped as array)
+
 // changing elements:
 <p>I</p>
 <p>am</p>
@@ -159,12 +160,14 @@ for(var x = 0; x<itemsToChange.length; x++) {
   itemsToChange[x].innerHTML = "Hello world"; // changes those <p> elements to "Hello world"
 }
 </script>
+
 // changing attributes:
 <img id="myImage" src="python.png" alt="" />
 <script>
 var imageChange = document.getElementById("myImage");
 imageChange.src = "java.png" // We can use innerHTML, src, href, style attributes to change contents of HTML or CSS
 </script>
+
 // changing attributes in CSS:
 <div id="CSSChange" style="width: 200px">Some Text</div>
 <script>
@@ -173,12 +176,118 @@ a.style.color = "6600FF";
 a.style.width = "100px";
 a.style.backgroundColor = "#33EA73"; // notice CSS property background-color is changed to backgroundColor in js
 </script>
+
 // to create elements:
+<div id ="demo">some content</div>
+<script>
+  var p = document.createElement("p");
+  var node = document.createTextNode("Some new text");
+  p.appendChild(node);
+  var div = document.getElementById("demo");
+  div.appendChild(p);
+</script>
 
 // to remove elements:
 <script>parent.removeChild(child); // or
 child.parentNode.removeChild(child); </script>
-// to replace elements:
 
-//
+// to replace elements:
+<div id="demo">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p></div>
+<script>
+var p = document.createElement("p");
+var node = document.createTextNode("This is new");
+p.appendChild(node);
+var parent = document.getElementById("demo");
+var child = document.getElementById("p1");
+parent.replaceChild(p, child);
+</script>
+
+// events handler:
+// onclick method:
+<button onclick="show()">Click Me</button>
+<script>
+function show() {
+  alert("Hi there");
+}
+</script> // or
+var x = document.getElementById("demo");
+x.onclick = function () {
+  document.body.innerHTML = Date();
+}
+
+// onload & onunload method:
+<body onload="doSomething()"> // or
+window.onload = function() {
+  // some codes
+}
+
+// onchange method:
+<input type="text" id="name" onchange="change()">
+<script>
+function change() {
+  var x = document.getElementById("name");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+// event listeners method:
+element.addEventListener("click", myFunction, true); // use click instead of onclick
+element.removeEventListener("click", myFunction);
+/*the 3rd parenthesis: true or false indicates the event propagation:
+true: capturing: down(div then p)
+false(default): bubbling: up(p then div)*/
+
+// image slider
+<div>
+  <button onclick="prev()"> Prev </button>
+  <img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg"
+    width="200px" height="100px"/>
+  <button onclick="next()"> Next </button>
+</div>
+<script>
+ var images = [
+  "http://www.sololearn.com/uploads/slider/1.jpg",
+  "http://www.sololearn.com/uploads/slider/2.jpg",
+  "http://www.sololearn.com/uploads/slider/3.jpg"
+  ];
+  var num = 0;
+function next() {
+  var slider = document.getElementById("slider");
+  num++;
+  if(num >= images.length) {
+    num = 0;
+  }
+  slider.src = images[num];
+}
+function prev() {
+  var slider = document.getElementById("slider");
+  num--;
+  if(num < 0) {
+    num = images.length-1;
+  }
+  slider.src = images[num];
+} </script>
+
+// form validation:
+<form onsubmit="return validate()" method="post">
+  Number: <input type="text" name="num1" id="num1" />
+  <br />
+  Repeat: <input type="text" name="num2" id="num2" />
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+<script>
+function validate() {
+  var n1 = document.getElementById("num1");
+  var n2 = document.getElementById("num2");
+  if(n1.value != "" && n2.value != "") {
+    if(n1.value == n2.value) {
+      return true;
+    }
+  }
+  alert("The values should be equal and not blank");
+  return false;
+} </script>
 ```
