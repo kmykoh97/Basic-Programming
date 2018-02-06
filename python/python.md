@@ -78,10 +78,10 @@ main()
 
 ### file handling and GUI(tkinter)
 *There are plenty of GUI libraies available. I am using tkinter or Tkinter(Python 3)*  
-**[clicks here to refer] (https://github.com/kmykoh97/SJTU/blob/master/School/2017%E4%B8%8A%E6%9C%BA/3rd%20lesson/1.py)**
+**[clicks here to refer](https://github.com/kmykoh97/SJTU/blob/master/School/2017%E4%B8%8A%E6%9C%BA/3rd%20lesson/1.py)**
 
 ### classes(OOP)
-**[clicks here to refer] (https://github.com/kmykoh97/hobby/blob/master/fun/python/blackJack.py)**  
+**[clicks here to refer](https://github.com/kmykoh97/hobby/blob/master/fun/python/blackJack.py)**  
 ```python
 # inheritance
 class Animals:
