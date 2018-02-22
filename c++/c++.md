@@ -4,11 +4,10 @@
 
 ### print, function, loops
 ```cpp
-#
+#include <iostream>
+using namespace std;
 
 int main() {
-  #include <iostream>
-  using namespace std;
 
   void printSomething(int x) {
     switch(x) {
@@ -50,4 +49,30 @@ int main() {
     }
   	cout << sum;
   }
+```
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+  cout << "hello world" << endl;
+  const double pi = 3.142;
+  char myGrade = "A";
+  bool isHappy = true;
+  int myAge = 21;
+  float favNum = 3.111;
+  double otherFavNum = 1.2232435535453345;
+  cout << "favourite number " << favNum << endl;
+
+  cout << "size of int " << sizeof(myAge) << endl;
+  // myAge++, ++myAge, myAge += 1; // same
+
+
+  return 0
+}
 ```
