@@ -111,6 +111,12 @@ void printSomething(int x) {
   }
 }
 
+void hello()
+{
+
+}
+
+
 int main() {
   // simple printing
   int myNumber;
