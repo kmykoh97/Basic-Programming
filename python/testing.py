@@ -10,8 +10,17 @@
 # listA = (1,2,"happy")
 # print listA
 
-list1 = [1, 2, "third", 4, 5, 6, 7, 8, 9, 10]
-print len(list1) # output 3
-print list1[1] # output 2
-print list1[:-1:2] # output
-print list1[-1]
+# list1 = [1, 2, "third", 4, 5, 6, 7, 8, 9, 10]
+# print len(list1) # output 3
+# print list1[1] # output 2
+# print list1[:-1:2] # output
+# print list1[-1]
+
+
+# name = input('enter: ')
+# handle = open(name, 'r')
+# counts = dict()
+
+# for line in handle:
+
+  

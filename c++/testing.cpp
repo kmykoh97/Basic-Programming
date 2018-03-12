@@ -96,51 +96,80 @@ void calculate()
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void printSomething(int x) {
-  switch(x) {
-    case 0:
-      cout << "Too little" << endl;
-      break;
-    case 5:
-      cout << "Too much" << "Second text \n";
-      break;
-    default:
-      cout << "Hello" << "nothing";
-  }
+string global_srt;
+int global_int;
+int main (){
+	vector<int> local_vct;
+	int local_int;
+cout << global_srt.size() << global_int << local_vct.size() << local_int ;
+return 0;
 }
 
-void hello()
-{
+// int main (){ unsigned int a = 6; int b = -20; if ( (a+b) > 0) cout<<">6\n"; else cout <<"<6\n";
+// return 0;
+// }
 
-}
+// void printSomething(int x) {
+//   switch(x) {
+//     case 0:
+//       cout << "Too little" << endl;
+//       break;
+//     case 5:
+//       cout << "Too much" << "Second text \n";
+//       break;
+//     default:
+//       cout << "Hello" << "nothing";
+//   }
+// }
+
+// void hello()
+// {
+
+// }
 
 
-int main() {
-  // simple printing
-  int myNumber;
-  cout << "Please enter a value:";
-  cin >> myNumber;
-  cout << "your number is " << myNumber << endl;
-  // for, while loop
-  for(int newVar = 0; newVar < 2; newVar++) {
-    int a = 1;
-    while(a<3) {
-      cout << newVar << myNumber << "\n";
-      a++;
-			printSomething(myNumber);
-    }
-  }
-  // arrays,loops
-  int myList[2][2] = {{1,1}, {2,3}};
-  cout << myList[0][1] << endl;
-  int arr[] = {1,2,3,4,5,6,7,8,9,0};
-  int sum = 0;
-  for(int x=0; x<10; x++) {
-    if(arr[x] >= 1) {
-      sum += arr[x];
-    }
-  }
-	cout << sum;
-}
+// int main() {
+//   // simple printing
+//   int myNumber;
+//   cout << "Please enter a value:";
+//   cin >> myNumber;
+//   cout << "your number is " << myNumber << endl;
+//   // for, while loop
+//   for(int newVar = 0; newVar < 2; newVar++) {
+//     int a = 1;
+//     while(a<3) {
+//       cout << newVar << myNumber << "\n";
+//       a++;
+// 			printSomething(myNumber);
+//     }
+//   }
+//   // arrays,loops
+//   int myList[2][2] = {{1,1}, {2,3}};
+//   cout << myList[0][1] << endl;
+//   int arr[] = {1,2,3,4,5,6,7,8,9,0};
+//   int sum = 0;
+//   for(int x=0; x<10; x++) {
+//     if(arr[x] >= 1) {
+//       sum += arr[x];
+//     }
+//   }
+// 	cout << sum;
+// // }
+
+// int main()
+// {
+// 	int i = 3.0;
+// 	float f = (float)i;
+// 	cout << i << endl;
+// 	cout << f << endl;
+// 	float a = 3.14121342452543453424343111111;
+// 	double b = (double)a;
+// 	cout << a << endl;
+// 	cout << b << endl;
+// 	vector <int> name(20);
+// 	cout << name[1] << endl;
+// 	return 0;
+// }
